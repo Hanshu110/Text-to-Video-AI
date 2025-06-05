@@ -1,0 +1,30 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+env/
+
+# Logs
+.logs/
+*.log
+
+# Streamlit and local state files
+.streamlit/
+*.sqlite3
+
+# Video output
+*.mp4
+*.avi
+*.mov
+*.wav
+
+# Mac/Windows OS files
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
