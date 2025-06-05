@@ -136,5 +136,5 @@ Access the app at:
 
 ## 📬 Contact
 
-Built with ❤️ by \HANISH
+Built with ❤️ by HANISH
 Pull requests & ⭐ stars welcome!
