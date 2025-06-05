@@ -1,3 +1,6 @@
+![GitHub stars](https://img.shields.io/github/stars/Hanshu110/Text-to-Video-AI?style=social)
+![Last Commit](https://img.shields.io/github/last-commit/Hanshu110/Text-to-Video-AI)
+![MIT License](https://img.shields.io/github/license/Hanshu110/Text-to-Video-AI)
 
 # 🎬 Text-to-Video AI Generator
 
