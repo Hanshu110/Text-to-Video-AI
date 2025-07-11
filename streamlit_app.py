@@ -64,6 +64,7 @@ st.markdown("""
         border-left: 4px solid #667eea;
         margin: 1rem 0;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        color: black;
     }
     
     .progress-step {
@@ -72,11 +73,13 @@ st.markdown("""
         border-radius: 8px;
         margin: 0.5rem 0;
         border-left: 3px solid #2196f3;
+        color: black;
     }
     
     .success-step {
         background: #e8f5e8;
         border-left-color: #4caf50;
+        color:black;
     }
     
     .error-step {
@@ -131,23 +134,6 @@ if 'progress_logs' not in st.session_state:
 with st.sidebar:
     st.header("🎯 Configuration")
     
-    # Environment status
-    st.subheader("🔑 Environment Status")
-    openai_key = os.getenv('OPENAI_API_KEY')
-    if openai_key:
-        st.success(f"✅ OpenAI API Key loaded")
-        st.text(f"Key: {openai_key[:8]}...{openai_key[-4:] if len(openai_key) > 12 else '***'}")
-    else:
-        st.error("❌ OpenAI API Key missing")
-        st.info("Add OPENAI_API_KEY to your .env file")
-    
-    # Video server selection
-    video_server = st.selectbox(
-        "Video Source",
-        ["pexel", "pixabay"],
-        help="Choose the video source for background footage"
-    )
-    
     # Audio settings
     st.subheader("🎵 Audio Settings")
     voice_options = [
@@ -163,12 +149,6 @@ with st.sidebar:
     with st.expander("⚙️ Advanced Settings"):
         max_retries = st.slider("Max Retries", 1, 5, 3)
         timeout_duration = st.slider("Timeout (seconds)", 30, 120, 60)
-        
-    # Progress tracking
-    st.subheader("📊 Progress")
-    if st.session_state.progress_logs:
-        for log in st.session_state.progress_logs[-5:]:  # Show last 5 logs
-            st.text(f"• {log}")
 
 # Main content area
 col1, col2 = st.columns([2, 1])
