@@ -118,7 +118,6 @@ Access the app at:
 
 ## 📸 Screenshots
 
-> Add a few screenshots/gifs here showing:
 >
 > ![image](https://github.com/user-attachments/assets/2e362167-b970-40f9-b90f-478cb9101f8d)
 
