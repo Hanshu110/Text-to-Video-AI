@@ -6,7 +6,7 @@ from openai import OpenAI
 groq_key = os.environ.get("GROQ_API_KEY")
 if groq_key and len(groq_key) > 30:
     from groq import Groq
-    model = "llama3-70b-8192"
+    model = "llama-3.3-70b-versatile"
     client = Groq(api_key=groq_key)
 else:
     OPENAI_API_KEY = os.getenv("OPENAI_KEY")
@@ -39,7 +39,7 @@ def generate_script(topic):
     prompt = (
         """You are a seasoned content writer for a YouTube Shorts channel, specializing in facts videos.
         
-        Your facts shorts are concise, each lasting less than 50 seconds (approximately 140 words).
+        Your facts shorts are concise, each lasting less than 120 seconds (approximately 250 words).
         
         They are incredibly engaging and original. When a user requests a specific type of facts short, you will create it.
         
